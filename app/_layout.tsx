@@ -1,6 +1,5 @@
-// App.tsx
 import React from "react";
-import IndexScreen from "./index"; // Asegúrate de que la ruta sea correcta
+import IndexScreen from "./index";
 
 const App = () => {
   return <IndexScreen />;

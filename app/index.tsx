@@ -56,9 +56,9 @@ const IndexScreen = () => {
   const toggleSound = async () => {
     if (sound) {
       if (isPlaying) {
-        await sound.stopAsync(); // Detener el sonido
+        await sound.stopAsync(); /
       } else {
-        await sound.playAsync(); // Reproducir el sonido
+        await sound.playAsync(); 
       }
       setIsPlaying(!isPlaying);
     }
@@ -71,7 +71,6 @@ const IndexScreen = () => {
       bgColor.value = withTiming("transparent", { duration: 1000 });
       censorTitleOffset.value = withSpring(0, { damping: 10 });
       censorTitleOpacity.value = withTiming(1, { duration: 1000 });
-      // Detener el sonido si está reproduciéndose
       if (isPlaying) {
         toggleSound();
       }
@@ -84,7 +83,6 @@ const IndexScreen = () => {
         500,
         withTiming(0, { duration: 1000 })
       );
-      // Reproducir el sonido al mostrar la censura
       toggleSound();
     }
     setShown(!isShown);
